@@ -28,6 +28,6 @@ public class UserController {
     @RequestMapping("/getPower.do")
     public R getOrder(){
 
-        return R.success("操作成功",restTemplate.getForObject("http://localhost:6100/getPower.do",Object.class));
+        return R.success("操作成功",restTemplate.getForObject("http://localhost:6101/getPower.do",Object.class));
     }
 }

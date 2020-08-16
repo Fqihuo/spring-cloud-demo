@@ -30,6 +30,8 @@
         <module>user</module>
         <module>power</module>
         <module>order</module>
+        <module>power1</module>
+        <module>eureka</module>
     </modules>
     <groupId>com.fanghao</groupId>
     <artifactId>spring-cloud-demo</artifactId>

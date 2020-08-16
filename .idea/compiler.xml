@@ -6,16 +6,20 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="eureka" />
         <module name="order" />
         <module name="power" />
+        <module name="power1" />
         <module name="user" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="eureka" options="-parameters" />
       <module name="order" options="-parameters" />
       <module name="power" options="-parameters" />
+      <module name="power1" options="-parameters" />
       <module name="spring-cloud-demo" options="-parameters" />
       <module name="user" options="-parameters" />
     </option>
