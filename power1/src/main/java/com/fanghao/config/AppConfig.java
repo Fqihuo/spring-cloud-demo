@@ -9,10 +9,10 @@ import org.springframework.context.annotation.Configuration;
 @ComponentScan("com")
 public class AppConfig {
 
-    @Bean
-    public TomcatServletWebServerFactory tomcat(){
-        TomcatServletWebServerFactory tomcat = new TomcatServletWebServerFactory();
-        tomcat.setPort(6101);
-        return tomcat;
-    }
+//    @Bean
+//    public TomcatServletWebServerFactory tomcat(){
+//        TomcatServletWebServerFactory tomcat = new TomcatServletWebServerFactory();
+//        tomcat.setPort(6101);
+//        return tomcat;
+//    }
 }
