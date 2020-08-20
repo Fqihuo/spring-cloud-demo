@@ -13,6 +13,9 @@
         <module name="user" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="test" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
@@ -21,6 +24,7 @@
       <module name="power" options="-parameters" />
       <module name="power1" options="-parameters" />
       <module name="spring-cloud-demo" options="-parameters" />
+      <module name="test" options="-parameters" />
       <module name="user" options="-parameters" />
     </option>
   </component>

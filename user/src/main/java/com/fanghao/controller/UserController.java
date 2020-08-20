@@ -1,5 +1,6 @@
 package com.fanghao.controller;
 
+import com.fanghao.service.PowerFeignClient;
 import com.fanghao.util.R;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,8 +16,11 @@ public class UserController {
     @Autowired
     RestTemplate restTemplate;
 
-    private static final String  ORDER_URL="http://SERVER-POWER";
-    private static final String  POWER_URL="http://localhost:6100";
+    private static final String  POWER_URL="http://SERVER-POWER";
+    private static final String  ORDER_URL="http://SERVER-ORDER";
+
+    @Autowired
+    private PowerFeignClient powerFeignClient;
 
     @RequestMapping("/getUser.do")
     public R getUser(){
@@ -25,9 +29,19 @@ public class UserController {
         return R.success("返回成功",map);
     }
 
-    @RequestMapping("/getPower.do")
+    @RequestMapping("getOrder.do")
     public R getOrder(){
+        return R.success("操作成功",restTemplate.getForObject(ORDER_URL+"/getOrder.do",Object.class));
+    }
 
-        return R.success("操作成功",restTemplate.getForObject("http://localhost:6101/getPower.do",Object.class));
+    @RequestMapping("/getFeignPower.do")
+    public R getFeignPower(){
+        return R.success("操作成功",powerFeignClient.getPower());
+    }
+
+    @RequestMapping("/getPower.do")
+    public R getPower(){
+
+        return R.success("操作成功",restTemplate.getForObject(POWER_URL+"/getPower.do",Object.class));
     }
 }
