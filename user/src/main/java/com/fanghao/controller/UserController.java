@@ -2,6 +2,8 @@ package com.fanghao.controller;
 
 import com.fanghao.service.PowerFeignClient;
 import com.fanghao.util.R;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -40,8 +42,15 @@ public class UserController {
     }
 
     @RequestMapping("/getPower.do")
+    @HystrixCommand(threadPoolKey = "getpower",
+        threadPoolProperties = {@HystrixProperty(name = "coreSize", value = "1")
+        },fallbackMethod = "getFeignPowerFallback")
     public R getPower(){
 
         return R.success("操作成功",restTemplate.getForObject(POWER_URL+"/getPower.do",Object.class));
+    }
+
+    public R getFeignPowerFallback(){
+        return R.error("系统维护中");
     }
 }

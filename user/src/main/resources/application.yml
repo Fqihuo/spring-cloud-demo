@@ -12,3 +12,22 @@ eureka:
 spring:
   application:
     name: client-user #此实例注册到eureka服务端的name
+
+feign:
+  hystrix:
+    enabled: true
+  client:
+    config:
+      SERVER-POWER:
+        connectTimeout: 20000
+        readTimeout: 2000
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 20000
+      circuitBreaker:
+        requestVolumeThreshold: 5
