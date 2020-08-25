@@ -28,8 +28,8 @@ public class LogFilter extends ZuulFilter {
     public Object run() throws ZuulException {
         RequestContext requestContext = new RequestContext();
         HttpServletRequest request = requestContext.getRequest();
-        String remoteaddr = request.getRemoteAddr();
-        System.out.println("访问者IP"+ remoteaddr + "访问地址："+ request.getRequestURI());
+        String remoteAddr = request.getRemoteAddr();
+        System.out.println("访问者IP"+ remoteAddr + "访问地址："+ request.getRequestURI());
         return null;
     }
 }
