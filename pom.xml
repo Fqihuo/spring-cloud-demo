@@ -33,6 +33,7 @@
         <module>power1</module>
         <module>eureka</module>
         <module>zuul001</module>
+        <module>Hystrix-Dashbord</module>
     </modules>
     <groupId>com.fanghao</groupId>
     <artifactId>spring-cloud-demo</artifactId>

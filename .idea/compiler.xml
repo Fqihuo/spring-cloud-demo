@@ -6,9 +6,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="Hystrix-Dashbord" />
+        <module name="eureka" />
         <module name="power" />
         <module name="user" />
-        <module name="eureka" />
         <module name="power1" />
         <module name="zuul001" />
         <module name="order" />
@@ -20,6 +21,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Hystrix-Dashbord" options="-parameters" />
       <module name="eureka" options="-parameters" />
       <module name="order" options="-parameters" />
       <module name="power" options="-parameters" />
