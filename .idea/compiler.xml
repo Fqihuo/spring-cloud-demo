@@ -6,13 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Hystrix-Dashbord" />
         <module name="eureka" />
-        <module name="power" />
-        <module name="user" />
-        <module name="power1" />
-        <module name="zuul001" />
+        <module name="Hystrix-Dashbord" />
         <module name="order" />
+        <module name="power" />
+        <module name="power1" />
+        <module name="user" />
+        <module name="zuul001" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
