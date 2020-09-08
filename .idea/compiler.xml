@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="configserver" />
         <module name="eureka" />
         <module name="Hystrix-Dashbord" />
         <module name="order" />
@@ -16,12 +17,15 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="configcenter" target="1.8" />
       <module name="test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="Hystrix-Dashbord" options="-parameters" />
+      <module name="configcenter" options="-parameters" />
+      <module name="configserver" options="-parameters" />
       <module name="eureka" options="-parameters" />
       <module name="order" options="-parameters" />
       <module name="power" options="-parameters" />
