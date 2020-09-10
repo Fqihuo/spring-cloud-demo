@@ -1,6 +1,6 @@
 spring:
   cloud:
     config:
-      name: user-config
+      name: user-config.yml
       label: master
       uri: http://localhost:8080/
