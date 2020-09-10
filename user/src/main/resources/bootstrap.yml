@@ -1,0 +1,6 @@
+spring:
+  cloud:
+    config:
+      name: user-config
+      label: master
+      uri: http://localhost:8080/
