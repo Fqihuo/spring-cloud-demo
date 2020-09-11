@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    config:
+      name: power-config
+      label: master
+      uri: http://localhost:8080/
+      profile: defualt
