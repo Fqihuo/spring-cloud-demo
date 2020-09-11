@@ -11,6 +11,7 @@ eureka:
     leaseExpirationDurationInSeconds: 30 #Eureka服务器在接收到实例的最后一次发出的心跳后，需要等待多久才可以将此实例删除，默认为90秒
 
 feign:
+  profile: dev
   hystrix:
     enabled: true
   client:
@@ -20,6 +21,7 @@ feign:
         readTimeout: 2000
 
 hystrix:
+  profile: dev
   command:
     default:
       execution:
@@ -30,6 +32,7 @@ hystrix:
         requestVolumeThreshold: 5
 
 management:
+  profile: dev
   endpoints:
     web:
       exposure:
