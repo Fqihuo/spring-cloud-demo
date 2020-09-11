@@ -1,6 +1,7 @@
 spring:
   cloud:
     config:
-      name: user-config.yml
+      name: user-config
       label: master
       uri: http://localhost:8080/
+      profile: defualt
