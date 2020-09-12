@@ -7,14 +7,15 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="config-server" />
-        <module name="configserver" />
-        <module name="eureka" />
         <module name="Hystrix-Dashbord" />
-        <module name="order" />
+        <module name="zipkin" />
+        <module name="eureka" />
+        <module name="configserver" />
         <module name="power" />
-        <module name="power1" />
         <module name="user" />
+        <module name="power1" />
         <module name="zuul001" />
+        <module name="order" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -35,6 +36,7 @@
       <module name="spring-cloud-demo" options="-parameters" />
       <module name="test" options="-parameters" />
       <module name="user" options="-parameters" />
+      <module name="zipkin" options="-parameters" />
       <module name="zuul001" options="-parameters" />
     </option>
   </component>

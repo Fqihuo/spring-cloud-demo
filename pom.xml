@@ -35,7 +35,8 @@
         <module>zuul001</module>
         <module>Hystrix-Dashbord</module>
         <module>config-server</module>
-        
+        <module>zipkin</module>
+
     </modules>
     <groupId>com.fanghao</groupId>
     <artifactId>spring-cloud-demo</artifactId>
