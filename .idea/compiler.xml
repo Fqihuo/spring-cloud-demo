@@ -7,15 +7,15 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="config-server" />
-        <module name="Hystrix-Dashbord" />
-        <module name="zipkin" />
-        <module name="eureka" />
         <module name="configserver" />
-        <module name="power" />
-        <module name="user" />
-        <module name="power1" />
-        <module name="zuul001" />
+        <module name="eureka" />
+        <module name="Hystrix-Dashbord" />
         <module name="order" />
+        <module name="power" />
+        <module name="power1" />
+        <module name="user" />
+        <module name="zipkin" />
+        <module name="zuul001" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
